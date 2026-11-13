@@ -1,0 +1,43 @@
+# Theses section.
+#   intro:      {en, de} markdown
+#   open:       list of topics: url (optional), en/de: {title, level, description}
+#   supervised: list of {title, year, level: {en, de}, student (only with consent), description: {en, de}, url (optional)}, newest first
+
+intro:
+  en: >
+    I supervise Bachelor's and Master's theses at the Chair for Human-Centered Artificial Intelligence
+    on sign language recognition and AI-based feedback for motor learning.
+    I am happy to discuss your own ideas in these areas.
+    If you are interested, send me an email with a short description of your background and motivation,
+    your CV and your transcript of records.
+  de: >
+    Ich betreue Bachelor- und Masterarbeiten am Lehrstuhl für Menschzentrierte Künstliche Intelligenz
+    zu Gebärdenspracherkennung und KI-gestütztem Feedback beim motorischen Lernen.
+    Gerne bespreche ich eigene Ideen aus diesen Bereichen.
+    Bei Interesse schick mir eine E-Mail mit einer kurzen Beschreibung deines Hintergrunds und deiner Motivation,
+    deinem Lebenslauf und deinem Notenspiegel.
+
+open: []
+
+supervised:
+  - title: Using All Parameters of the MANO Hand Model for Isolated Sign Language Recognition
+    year: 2026
+    level: { en: "Bachelor's thesis", de: Bachelorarbeit }
+    description:
+      en: >
+        The thesis explores isolated sign language recognition on the parameters of the MANO hand model,
+        extracted from WLASL videos with HaMeR, as a compact middle ground between raw video and skeletal poses.
+      de: >
+        Die Arbeit untersucht isolierte Gebärdenspracherkennung auf den Parametern des MANO-Handmodells,
+        die mit HaMeR aus WLASL-Videos gewonnen wurden, als kompakten Mittelweg zwischen Rohvideo und Skelettdaten.
+  - title: "Read My Mouth: Implementation of Keyword Spotting for Alignment of Subtitles to German Sign Language"
+    year: 2025
+    level: { en: "Bachelor's thesis", de: Bachelorarbeit }
+    description:
+      en: >
+        The thesis adapts a visual keyword spotting framework (KWS-Net) to German, detecting spoken keywords
+        from lip movements in silent video, as a step towards aligning subtitles with German Sign Language.
+      de: >
+        Die Arbeit überträgt ein Framework für visuelles Keyword Spotting (KWS-Net) auf das Deutsche,
+        also das Erkennen gesprochener Schlüsselwörter anhand von Lippenbewegungen in stummen Videos,
+        als Schritt zur Ausrichtung von Untertiteln an Deutsche Gebärdensprache.

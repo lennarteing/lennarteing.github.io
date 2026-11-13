@@ -1,12 +1,38 @@
 ---
 layout: default
 ---
+{%- assign t = site.data.i18n[page.lang] -%}
 
-  <div id="homeid" class="col-sm-8">
-        <h1>Welcome to the Allan Lab</h1>
+<section class="hero{% if site.author.photo == '' %} hero-nophoto{% endif %}" id="about">
+  <div class="hero-text">
+    <p class="kicker">{{ t.kicker }}</p>
+    <h1>{{ site.author.name }}</h1>
+    <div class="about">
+      {{ content }}
+    </div>
+    <nav class="links" aria-label="Contact and profiles">
+      <a class="btn btn-solid" href="mailto:{{ site.author.email }}"><i class="fa fa-envelope"></i>{{ t.email }}</a>
+      {% for link in site.author.links %}
+      <a class="btn" href="{{ link.url }}"><i class="{{ link.icon }}"></i>{{ link.name }}</a>
+      {% endfor %}
+      <a class="btn" href="{{ site.baseurl }}/{{ t.cv_pdf }}"><i class="fa fa-file-text-o"></i>{{ t.cv }}</a>
+    </nav>
+  </div>
+  {% if site.author.photo != '' %}
+  <figure class="hero-photo">
+    {% include bio.html %}
+  </figure>
+  {% endif %}
+</section>
 
-	{{ content }}
-  </div>
-  <div id="newsid" class="col-sm-4" >
-	{% include news.html %}
-  </div>
+<section class="publications" id="publications">
+  {% include publist.html t=t %}
+</section>
+
+<section class="publications" id="research">
+  {% include projects.html t=t lang=page.lang %}
+</section>
+
+<section class="publications" id="theses">
+  {% include theses.html t=t lang=page.lang %}
+</section>

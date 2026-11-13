@@ -1,0 +1,25 @@
+# Site-only fields per publication, keyed by the bib key in the CV's own-bib.bib.
+# Only keys listed here are published; `key: {}` publishes an entry without extras.
+# Fields: highlight (1 = card with image, else compact list), image (images/pubpic/),
+#         description, link {url, display}, venue / year (override the .bib), news1, news2 (markdown).
+
+eing2026nice:
+  highlight: 1
+  venue: AVI 2026
+
+eing2026video:
+  highlight: 1
+  venue: ACII 2025 (to appear)
+  year: 2025   # conference year; the arXiv version is from 2026
+
+luna2025lightweight:
+  highlight: 1
+  venue: ICMI 2025
+
+luna-jimenez-etal-2026-emotion:
+  highlight: 1
+  venue: SignLang @ LREC 2026
+
+luna-jimenez-etal-2026-dgs:
+  highlight: 1
+  venue: SignLang @ LREC 2026

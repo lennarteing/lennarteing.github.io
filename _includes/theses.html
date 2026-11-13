@@ -1,0 +1,34 @@
+{%- assign theses = site.data.theses -%}
+<div class="sec-head">
+  <h2>{{ include.t.theses }}</h2>
+</div>
+
+<div class="about theses-intro">{{ theses.intro[include.lang] | markdownify }}</div>
+
+{% if theses.open.size > 0 %}
+<h3 class="sub-head">{{ include.t.open_topics }}</h3>
+<ul class="publist-compact">
+  {% for topic in theses.open %}
+  {% assign text = topic[include.lang] %}
+  <li>
+    <span class="pub-title">{% if topic.url %}<a href="{{ topic.url }}">{{ text.title }}</a>{% else %}{{ text.title }}{% endif %}</span>
+    <span class="pub-venue">{{ text.level }}</span>
+    {% if text.description %}<span class="pub-authors">{{ text.description }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if theses.supervised.size > 0 %}
+<h3 class="sub-head">{{ include.t.supervised }}</h3>
+<ul class="publist-compact">
+  {% for thesis in theses.supervised %}
+  <li>
+    <span class="pub-title">{% if thesis.url %}<a href="{{ thesis.url }}">{{ thesis.title }}</a>{% else %}{{ thesis.title }}{% endif %}</span>
+    {% if thesis.student %}<span class="pub-authors">{{ thesis.student }}</span>{% endif %}
+    <span class="pub-venue">{{ thesis.level[include.lang] }}, {{ thesis.year }}</span>
+    {% if thesis.description %}<span class="pub-desc thesis-desc">{{ thesis.description[include.lang] }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

@@ -1,0 +1,44 @@
+# Research section. Shared fields: period, url, image (images/projects/).
+# Per language (en/de): title, description (markdown), links (markdown), period (overrides the shared one).
+
+- period: 2023 – 2026
+  url: https://www.interaktive-technologien.de/projekte/bigeko
+  publications: [eing2026video, luna2025lightweight, luna-jimenez-etal-2026-emotion, luna-jimenez-etal-2026-dgs]
+  en:
+    title: BIGEKO – Bidirectional sign language communication
+    description: >
+      BIGEKO investigated a system for barrier-free communication between Deaf people and emergency services.
+      Deaf callers sign, the system translates their signing into speech for the emergency dispatch centre,
+      and the dispatcher's replies are shown back to them.
+      I joined the project in 2024 and explored how existing lip reading and facial expression recognition
+      technology can improve sign language recognition.
+      Funded by the German Federal Ministry of Research, Technology and Space ([BMFTR](https://www.bmftr.bund.de/)).
+  de:
+    title: BIGEKO – Bidirektionale Gebärdensprach-Kommunikation
+    description: >
+      BIGEKO untersuchte ein System für die barrierefreie Kommunikation zwischen gehörlosen Menschen und Einsatzkräften im Notfall.
+      Gehörlose Anrufende gebärden, das System übersetzt die Gebärden für die Leitstelle in Lautsprache
+      und zeigt die Antworten der Leitstelle wieder an.
+      Ich bin 2024 in das Projekt eingestiegen und habe untersucht, wie bestehende Technologien zum Lippenlesen
+      und zur Mimikerkennung die Gebärdenspracherkennung verbessern können.
+      Gefördert vom Bundesministerium für Forschung, Technologie und Raumfahrt ([BMFTR](https://www.bmftr.bund.de/)).
+
+- publications: [eing2026nice]
+  en:
+    title: AI feedback for motor learning
+    period: PhD topic
+    description: >
+      In my PhD, I investigate how counterfactual explanations can serve as feedback in sports and motor learning
+      by showing how a movement would have to change to achieve a better result.
+      I am particularly interested in aligning the type of feedback, and the way it is given, with established theories
+      of motor learning in sports, and in using these learning principles to generate better counterfactuals.
+      I currently focus on javelin throwing and am working on extensions to other sports.
+  de:
+    title: KI-gestütztes Feedback beim motorischen Lernen
+    period: Promotionsthema
+    description: >
+      In meiner Promotion untersuche ich, wie kontrafaktische Erklärungen als Feedback im Sport und beim motorischen Lernen
+      eingesetzt werden können, indem sie zeigen, wie sich eine Bewegung verändern müsste, um ein besseres Ergebnis zu erzielen.
+      Besonders interessiert mich, wie sich Art und Vermittlung des Feedbacks an bestehenden Theorien des motorischen Lernens
+      im Sport ausrichten lassen und wie sich diese Lernprinzipien nutzen lassen, um bessere kontrafaktische Erklärungen zu generieren.
+      Derzeit konzentriere ich mich auf den Speerwurf und arbeite an Erweiterungen auf weitere Sportarten.

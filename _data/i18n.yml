@@ -1,0 +1,45 @@
+# UI strings per language. Pages set `lang: en|de`; `home` is the page's URL (no trailing slash for en).
+en:
+  home: ""
+  other: de
+  switch_label: Deutsch
+  kicker: Research Associate, University of Augsburg
+  nav_about: About
+  nav_publications: Publications
+  nav_research: Research
+  nav_theses: Theses
+  nav_cv: CV
+  email: Email
+  cv: CV
+  cv_pdf: docs/cv.pdf
+  publications: Publications
+  research: Research
+  theses: Theses
+  open_topics: Open topics
+  related: Selected publications
+  supervised: Supervised theses
+  footer: >-
+    Made with <a href="https://jekyllrb.com">Jekyll</a>; based on the <a href="https://www.allanlab.org/aboutwebsite.html">Allan Lab template</a>
+    as adapted by <a href="https://github.com/SimonGiebenhain/simongiebenhain.github.io">Simon Giebenhain</a>.
+de:
+  home: /de
+  other: en
+  switch_label: English
+  kicker: Wissenschaftlicher Mitarbeiter, Universität Augsburg
+  nav_about: Über mich
+  nav_publications: Publikationen
+  nav_research: Forschung
+  nav_theses: Abschlussarbeiten
+  nav_cv: Lebenslauf
+  email: E-Mail
+  cv: Lebenslauf
+  cv_pdf: docs/lebenslauf.pdf
+  publications: Publikationen
+  research: Forschung
+  theses: Abschlussarbeiten
+  open_topics: Offene Themen
+  related: Ausgewählte Publikationen
+  supervised: Betreute Abschlussarbeiten
+  footer: >-
+    Erstellt mit <a href="https://jekyllrb.com">Jekyll</a>; basiert auf dem <a href="https://www.allanlab.org/aboutwebsite.html">Allan-Lab-Template</a>
+    in der Anpassung von <a href="https://github.com/SimonGiebenhain/simongiebenhain.github.io">Simon Giebenhain</a>.

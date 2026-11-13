@@ -1,0 +1,24 @@
+version: "3"
+
+# CV_REPO: local checkout of the (private) cv repo, set in a git-ignored .env, e.g. CV_REPO=../cv
+dotenv: [".env"]
+
+tasks:
+  sync-cv:
+    desc: Copy the CV PDF and regenerate the publication list from the CV's .bib
+    preconditions:
+      - sh: test -n "$CV_REPO"
+        msg: "set CV_REPO (path to the cv repo) in .env"
+    cmds:
+      - cp "$CV_REPO/english/Eing_Lennart_CV.pdf" docs/cv.pdf
+      - cp "$CV_REPO/german/Eing_Lennart_Lebenslauf.pdf" docs/lebenslauf.pdf
+      - python3 scripts/bib2publist.py "$CV_REPO/english/own-bib.bib"
+
+  serve:
+    desc: Local preview on http://localhost:4000 (German at /de/), reloads on changes; needs Docker
+    cmds:
+      - >-
+        docker run --rm -it -p 4000:4000 -p 35729:35729
+        -u "$(id -u):$(id -g)" -e HOME=/tmp -e BUNDLE_PATH=/site/vendor/bundle
+        -v "$PWD":/site -w /site ruby:3.3
+        sh -c "bundle install --quiet && bundle exec jekyll serve --host 0.0.0.0 --livereload"

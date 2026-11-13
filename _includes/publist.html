@@ -1,0 +1,44 @@
+{% assign highlighted = site.data.publist | where: "highlight", 1 %}
+{% assign others = site.data.publist | where_exp: "p", "p.highlight != 1" %}
+<div class="sec-head">
+  <h2>{{ include.t.publications }}</h2>
+</div>
+
+<div class="pubgrid">
+  {% for publi in highlighted %}
+  <article class="pub">
+    {% if publi.image %}
+    <div class="pub-media">
+      <a href="{{ publi.link.url }}" aria-label="{{ publi.title | escape }}">
+        {% if publi.image contains '.mp4' %}
+        <video src="{{ site.baseurl }}/images/pubpic/{{ publi.image }}" autoplay muted loop playsinline preload="metadata"></video>
+        {% else %}
+        <img src="{{ site.baseurl }}/images/pubpic/{{ publi.image }}" alt="" loading="lazy">
+        {% endif %}
+      </a>
+    </div>
+    {% endif %}
+    <div class="pub-body">
+      <h3 class="pub-title"><a href="{{ publi.link.url }}">{{ publi.title }}</a></h3>
+      <p class="pub-authors">{{ publi.authors | replace: site.author.name, "<strong>Lennart Eing</strong>" }}</p>
+      <p class="pub-venue">{{ publi.venue }}{% assign y = publi.year | append: "" %}{% unless publi.venue contains y %}, {{ publi.year }}{% endunless %}</p>
+      {% if publi.description %}<p class="pub-desc">{{ publi.description }}</p>{% endif %}
+      {% if publi.news1 %}<div class="pub-note pub-note-strong">{{ publi.news1 | markdownify }}</div>{% endif %}
+      {% if publi.news2 %}<div class="pub-note">{{ publi.news2 | markdownify }}</div>{% endif %}
+      {% if publi.link.url %}<a class="pub-link" href="{{ publi.link.url }}">{{ publi.link.display }}<span aria-hidden="true">&nbsp;&#8599;</span></a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if others.size > 0 %}
+<ul class="publist-compact">
+  {% for publi in others %}
+  <li>
+    <span class="pub-title">{% if publi.link.url %}<a href="{{ publi.link.url }}">{{ publi.title }}</a>{% else %}{{ publi.title }}{% endif %}</span>
+    <span class="pub-authors">{{ publi.authors | replace: site.author.name, "<strong>Lennart Eing</strong>" }}</span>
+    <span class="pub-venue">{{ publi.venue }}{% assign y = publi.year | append: "" %}{% unless publi.venue contains y %}, {{ publi.year }}{% endunless %}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
